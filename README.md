@@ -1,24 +1,27 @@
-### stonefish_ros package for ROS
+### stonefish_ros2 package for ROS2
 
-This package delivers a ROS interface for the _Stonefish_ library. It also includes a standard simulator node, which loads the simulation scenario from a scenario description file (XML). The included parser extends the standard functionality of the _Stonefish_ library to enable ROS style search for files, resolution of arguments as well as a complete message interface. 
+This package delivers a ROS2 interface for the _Stonefish_ library. It also includes a standard simulator node, which loads the simulation scenario from a scenario description file (XML). The included parser extends the standard functionality of the _Stonefish_ library to enable search for files, resolution of parameters as well as a complete message interface. 
 
 ### Installation
 
-1. Install the open-source [Stonefish](https://github.com/patrykcieslak/stonefish) library (*the same version as the ROS package!*).
-2. Clone the *stonefish_ros* package to your catkin workspace.
+1. Install the open-source [Stonefish](https://github.com/patrykcieslak/stonefish) library (*the same version as the ROS2 package!*).
+2. Clone the *stonefish_ros2* package to your workspace.
 3. Compile the workspace.
 
 ### Launching
 
-To run the standard simulator node you have to include the 'simulator.launch' file in your own launch file, overriding the default arguments.
-This package does not include any examples of usage. The best way to learn how to use this package is to install the [cola2_stonefish](https://bitbucket.org/udg_cirs/cola2_stonefish) package, containing multiple, fully working examples of robots, developed by the CIRS Laboratory (University of Girona, Spain).
+To run the standard simulator node you have to include the 'stonefish_simulator.launch.py' file in your own launch file, overriding the default arguments.
+Please refer to the documentation for details.
+
+## ArduPilot-Stonefish-Ros2
+Please refer to https://github.com/bvibhav/stonefish_bluerov2
 
 ### Credits
-This software was written and is continuously developed by Patryk Cieślak.
-
 If you find this software useful in your research, please cite:
 
-*Patryk Cieślak, "Stonefish: An Advanced Open-Source Simulation Tool Designed for Marine Robotics, With a ROS Interface", In Proceedings of MTS/IEEE OCEANS 2019, June 2019, Marseille, France*
+*Patryk Cieślak, "Stonefish: An Advanced Open-Source Simulation Tool Designed for Marine Robotics, With a ROS Interface", In Proceedings of MTS/IEEE OCEANS 2019, June 2019, Marseille, France* 
+
+*Michele Grimaldi, "Stonefish: Supporting Machine Learning Research in Marine Robotics", In Proceedings of ICRA 2025, May 2025, USA*
 ```
 @inproceedings{stonefish,
    author = {Cie{\'s}lak, Patryk},
@@ -27,9 +30,18 @@ If you find this software useful in your research, please cite:
    month = jun,
    year = {2019},
    doi={10.1109/OCEANSE.2019.8867434}}
+
+@misc{grimaldi2025stonefishsupportingmachinelearning,
+      title={Stonefish: Supporting Machine Learning Research in Marine Robotics}, 
+      author={Michele Grimaldi and Patryk Cieslak and Eduardo Ochoa and Vibhav Bharti and Hayat Rajani and Ignacio Carlucho and Maria Koskinopoulou and Yvan R. Petillot and Nuno Gracias},
+      year={2025},
+      eprint={2502.11887},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2502.11887}, 
+}
 ```
-### Funding
-This work was part of a project titled ”Force/position control system to enable compliant manipulation from a floating I-AUV”, which received funding from the European Community H2020 Programme, under the Marie Sklodowska-Curie grant agreement no. 750063. The work was continued under a project titled ”EU Marine Robots”, which received funding from the European Community H2020 Programme, grant agreement no. 731103.
+
 
 ### License
 This is free software, published under the General Public License v3.0.
