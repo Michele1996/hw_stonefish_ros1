@@ -1,0 +1,18 @@
+<launch>
+    <arg name="simulation_data" default="/path/to/data"/> <!-- path to the data directory -->
+    <arg name="scenario_description" default="/path/to/scenario"/> <!-- path to the scenario description -->
+    <arg name="simulation_rate" default="500"/> <!-- number of simulation steps per second -->
+    <arg name="graphics_resolution" default="1200 800"/> <!-- resolution of the simulation window -->
+    <arg name="graphics_quality" default="medium"/> <!-- low, medium, or high -->
+
+    <!-- Use the Python script with Pybind11 -->
+    <node name="main_parsed_simulator_launcher" pkg="stonefish_ros" type="gym_stonefish.py" output="screen">
+        <param name="simulation_data" value="$(arg simulation_data)" />
+        <param name="scenario_description" value="$(arg scenario_description)" />
+        <param name="simulation_rate" value="$(arg simulation_rate)" />
+        <param name="graphics_resolution" value="$(arg graphics_resolution)" />
+        <param name="graphics_quality" value="$(arg graphics_quality)" />
+    </node>
+    <node name="opengym_interface" pkg="stonefish_ros" type="train_auv.py" output="screen"/>
+</launch>
+
