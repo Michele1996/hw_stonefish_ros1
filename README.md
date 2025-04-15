@@ -1,10 +1,10 @@
-### stonefish_ros2 package for ROS2
+### stonefish_ros2 package for ROS1
 
-This package delivers a ROS2 interface for the _Stonefish_ library. It also includes a standard simulator node, which loads the simulation scenario from a scenario description file (XML). The included parser extends the standard functionality of the _Stonefish_ library to enable search for files, resolution of parameters as well as a complete message interface. 
+This package delivers a ROS1 interface for the _Stonefish_ library. It also includes a standard simulator node, which loads the simulation scenario from a scenario description file (XML). The included parser extends the standard functionality of the _Stonefish_ library to enable search for files, resolution of parameters as well as a complete message interface. 
 
 ### Installation
 
-1. Install the open-source [Stonefish](https://github.com/patrykcieslak/stonefish) library (*the same version as the ROS2 package!*).
+1. Install the open-source [Stonefish](https://github.com/patrykcieslak/stonefish) library (*the same version as the ROS1 package!*).
 2. Clone the *stonefish_ros2* package to your workspace.
 3. Compile the workspace.
 
@@ -13,8 +13,6 @@ This package delivers a ROS2 interface for the _Stonefish_ library. It also incl
 To run the standard simulator node you have to include the 'stonefish_simulator.launch.py' file in your own launch file, overriding the default arguments.
 Please refer to the documentation for details.
 
-## ArduPilot-Stonefish-Ros2
-Please refer to https://github.com/bvibhav/stonefish_bluerov2
 
 ### Credits
 If you find this software useful in your research, please cite:
